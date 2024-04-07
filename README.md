@@ -32,6 +32,7 @@ git config --global user.email  邮箱
 
 ## 2.队内仓库地址
 HTML：https://github.com/lolcheng/MultiDev
+
 SSH：git@github.com:lolcheng/MultiDev.git
 
 ## 3.Fork队里的仓库
@@ -40,13 +41,19 @@ SSH：git@github.com:lolcheng/MultiDev.git
 
 ## 4.第一次操作
 当有一个新方案时，我会创建一个新的空分支，切记确认对应的空分支
+
 新建一个文件夹存放仓库，在仓库文件夹下的git bash中键入下载仓库内容：
+
 `git clone -b 新的空分支名 git@github.com:lolcheng/MultiDev.git`
+
 注意，一定要下载对应的分支
 
 记得一定要进入有.git的文件夹，一般是你新建的文件夹下的子文件夹，不然会报错：not a git repository
+
 接着，当你把新的代码写好后，把整个Keil工程复制到这个有.git的文件夹中（建议写readme）
+
 如果上传的Keil工程里有.git文件夹要先删掉（主目录和USER目录下都可能有）
+
 接着就可以上传文件了，在仓库文件夹下的git bash中依次键入：
 ```
 git add .            //警告不用管
@@ -54,12 +61,16 @@ git commit -m "更新信息"
 git push             
 ```
 这样子你本地的仓库就会被更新，但注意，此时你还没有将代码上传到队里的仓库
+
 要将你的代码上传到队里的仓库，你需要进行Pull Request操作
+
 在你的github工程主页上方点击Pull Request，然后点击create a pull request，选择将你本地的main分支提交到队里仓库的对应名称的分支后点击create pull request，添加标题和描述后create pull request就可以把你的请求上传到队里的仓库了，当管理员同意后对应的分支就会被更新为你的main分支内容。
 
 ## 5.之后的操作
 当有人更新对应的分支时，请及时获取最新的分支信息，一般建议每次要写新东西前主动进行一次更新，避免版本落后。
+
 在仓库文件夹下的git bash中键入：`git pull`
+
 每次修改好文件需要上传时，在仓库文件夹下的git bash中依次键入：
 ```
 git add .
@@ -67,8 +78,10 @@ git commit -m "更新信息"
 git push
 ```
 同样的，如果上传的Keil文件里有.git文件夹，记得删掉再上传（主目录和USER目录下都有）
+
 同样的，此时也只有你本地的仓库被更新，队里的仓库并没有更新，要将你的代码上传到队里的仓库，你仍然需要进行Pull Request操作
 
 ## 6.注意事项
 1>如果git push失败，很有可能是你在修改仓库并上传之前已经有人提前上传了新版本的仓库，此时需要先git pull获取最新的仓库后处理冲突再将写好的给git push
+
 2>分支的新增和删除均由管理员操作
