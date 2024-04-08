@@ -4,6 +4,8 @@
 
 111
 
+222
+
 1>如果有git bash意味着git已经下载，否则自己上网找办法
 
 2>查看username和useremail是否配置完成：
