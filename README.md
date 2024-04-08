@@ -1,9 +1,13 @@
 # 武汉大学机器人队代码统一管理平台
 
 ## 0.准备工作：下载配置git&创建SSH公钥
+
+111
+
 1>如果有git bash意味着git已经下载，否则自己上网找办法
 
 2>查看username和useremail是否配置完成：
+
 打开git bash输入git config user.name和git config user.email查看是否有结果，没有的话依次输入进行配置（与github账户一致）：
 ```
 git config --global user.name 用户名
@@ -40,8 +44,8 @@ HTML：https://github.com/lolcheng/MultiDev
 SSH：git@github.com:lolcheng/MultiDev.git
 
 ## 3.Fork队里的仓库
-打开网址，右上角点击Fork，然后点击Create fork，此时会把队里的仓库保存到你的本地账户
-下面的操作都会在你本地的仓库进行，对应你本地的main分支
+打开网址，右上角点击Fork，然后点击Create fork，取消勾选Only clone the main branch，此时会把队里的整个仓库保存到你的本地账户
+下面的操作都会在你本地的仓库进行
 
 ## 4.第一次操作
 当有一个新方案时，管理员会创建一个新的空分支，切记确认对应的空分支，一定要下载对应的分支仓库
