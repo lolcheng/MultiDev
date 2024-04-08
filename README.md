@@ -11,10 +11,14 @@ git config --global user.email  邮箱
 ```
 3>创建SSH公钥以下载仓库：
 在git bash里输入：ssh-keygen -t rsa -C "邮箱"
+
 中间出现的所有停顿全部回车就可以（是设置密码的，但不需要）
+
 打开C盘用户文件夹下的.ssh文件中的id_rsa.pub文件，记事本打开，其内容即为SSH公钥，复制到你的github账户，点击右上角头像->Settings->SSH and GPG keys->New SSH key->随便取个title，然后粘贴即可
 
-验证：键入ssh -T git@github.com如果出现Hi 用户名! You've successfully authenticated, but GitHub does not provide shell access.即配置完成
+验证：键入ssh -T git@github.com
+
+如果出现Hi 用户名! You've successfully authenticated, but GitHub does not provide shell access.即配置完成
 
 ## 1.什么是分支
 分支是从主线上分离出来进行另外的操作的代码线。分支的存在既不影响主线，主线又可以继续其原有的工作流程。
@@ -40,19 +44,17 @@ SSH：git@github.com:lolcheng/MultiDev.git
 下面的操作都会在你本地的仓库进行，对应你本地的main分支
 
 ## 4.第一次操作
-当有一个新方案时，我会创建一个新的空分支，切记确认对应的空分支
+当有一个新方案时，管理员会创建一个新的空分支，切记确认对应的空分支，一定要下载对应的分支仓库
 
 新建一个文件夹存放仓库，在仓库文件夹下的git bash中键入下载仓库内容：
 
 `git clone -b 新的空分支名 git@github.com:lolcheng/MultiDev.git`
 
-注意，一定要下载对应的分支
-
 记得一定要进入有.git的文件夹，一般是你新建的文件夹下的子文件夹，不然会报错：not a git repository
 
 接着，当你把新的代码写好后，把整个Keil工程复制到这个有.git的文件夹中（建议写readme）
 
-如果上传的Keil工程里有.git文件夹要先删掉（主目录和USER目录下都可能有）
+如果上传的Keil工程里有.git文件夹要先删掉（主目录和USER目录下都可能有），不然会报错：does not have a commit checked out
 
 接着就可以上传文件了，在仓库文件夹下的git bash中依次键入：
 ```
@@ -82,6 +84,6 @@ git push
 同样的，此时也只有你本地的仓库被更新，队里的仓库并没有更新，要将你的代码上传到队里的仓库，你仍然需要进行Pull Request操作
 
 ## 6.注意事项
-1>如果git push失败，很有可能是你在修改仓库并上传之前已经有人提前上传了新版本的仓库，此时需要先git pull获取最新的仓库后处理冲突再将写好的给git push
+1>如果git push失败，很有可能是你在修改仓库并上传之前已经有人提前上传了新版本的仓库，此时需要先git pull获取最新的仓库后处理冲突再将写好的给git push，所以建议要写新东西前主动进行一次git pull
 
 2>分支的新增和删除均由管理员操作
